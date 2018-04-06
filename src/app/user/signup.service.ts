@@ -20,7 +20,7 @@ export class SignupService {
     {
       let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
       let observable : Observable<any> = this.http.post("http://bellegarde.damiendesousa.ovh/EasyTravelling/welcome/signUp",
-     {"lastName": lastName , "firstName":firstName ,  "email": email , "passwd": passwd , "birthday": birthday ,"genre": genre} , options)
+     {"lastName": lastName , "firstName":firstName ,  "email": email , "passwd": passwd , "birthday": birthday ,"gender": genre} , options)
      .map((res: Response) => res);
 
      return observable;

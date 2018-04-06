@@ -5,19 +5,19 @@
         <form (ngSubmit)="onSubmit()" #userForm="ngForm" class="form-control col-md-12 input-group-lg">
 
             <div class="form-group">
-                <input type="radio" name="genre" id="homme" value="Homme" required [(ngModel)]="user.genre" #genre="ngModel"> Homme
+                <input type="radio" name="genre" id="homme" value="Homme" required [(ngModel)]="user.gender" #genre="ngModel"> Homme
               
-                <input type="radio" name="genre" id="femme" value="Femme" required [(ngModel)]="user.genre" #genre="ngModel"> Femme
+                <input type="radio" name="genre" id="femme" value="Femme" required [(ngModel)]="user.gender" #genre="ngModel"> Femme
             </div>
 
             <div class="row">               
                 <div class="col-md form-group">
-                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="FirstName" required [(ngModel)]="user.firstname" name="firstname" #firstname="ngModel">
+                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="FirstName" required [(ngModel)]="user.firstName" name="firstname" #firstname="ngModel">
                     
                 </div>
         
                 <div class="col-md form-group">
-                    <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname" required [(ngModel)]="user.lastname" name="lastname" #lastname="ngModel">
+                    <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname" required [(ngModel)]="user.lastName" name="lastname" #lastname="ngModel">
                     
                 </div>
                 
@@ -31,7 +31,7 @@
 
             <div class="row">
                 <div class="col-md form-group">
-                    <input type="password" class="form-control" name="password" id="password" placeholder="Password" required [(ngModel)]="user.password" name="password" #password="ngModel">
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Password" required [(ngModel)]="user.passwd" name="password" #password="ngModel">
                     
                 </div>
     
@@ -62,5 +62,7 @@
 
         <a class="nav-link" routerLink="">Back to Index</a>
     </div>
+
+    <p>{{jsonObj | json}}</p>
 
 

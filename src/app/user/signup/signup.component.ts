@@ -17,7 +17,7 @@ export class SignupComponent implements OnInit {
 
   jsonObj = {};
 
-  user = {lastName: "", firstName: "", email: "", passwd: "", birthday: null , genre:""};
+  user = {lastName: "", firstName: "", email: "", passwd: "", birthday:  null, gender:""};
 
   confirmPasswd: string;
 
@@ -32,7 +32,7 @@ export class SignupComponent implements OnInit {
   onSubmit() {
     this.route.params.subscribe(params => {
     this.submitted = true;
-    this.SignupService.addUser(this.user.lastName , this.user.firstName , this.user.birthday , this.user.email, this.user.passwd , this.user.genre)
+    this.SignupService.addUser(this.user.lastName , this.user.firstName , this.user.birthday , this.user.email, this.user.passwd , this.user.gender)
     .subscribe(res => this.jsonObj = res);
   });
   }
