@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SigninComponent} from './user/signin/signin.component';
+import { SigninService } from './user/signin.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-}
+  title = 'EasyTravelling';
+  utilisateur = null;
+
+  ngOnInit() {
+    this.utilisateur = JSON.parse(sessionStorage.getItem('utilisateur'));
+
+    }
+
+    logout() {
+      this.utilisateur = null;
+      sessionStorage.removeItem('utilisateur');
+      location.reload();
+    };
+ }
