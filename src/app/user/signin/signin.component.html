@@ -1,6 +1,6 @@
 <div *ngIf="utilisateur == null" class="container">
     <div class="col-md-4">
-        <h1> Connect Yourself  !</h1>
+        <h1> Connect Yourself !</h1>
         <hr>
     </div>
     <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="form-control col-md-4 input-group-lg">
@@ -15,8 +15,11 @@
     </form>
 
     <div class="row" style="margin-top: 5px">
-        <div class="col-md-4">           
+        <div class="col-md-4">
         </div>
     </div>
 
+</div>
+<div>
+    {{utilisateur | json}}
 </div>
