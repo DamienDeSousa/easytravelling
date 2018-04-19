@@ -5,14 +5,20 @@ import { SigninComponent} from './user/signin/signin.component';
 import { SignupComponent} from './user/signup/signup.component';
 import { UserModule } from './user/user.module';
 import { WelcomeComponent} from './welcome/welcome.component';
+import { TipsComponent} from './tips/tips.component';
+import { AfficherTipsComponent} from './afficher-tips/afficher-tips.component';
+import { CreerTipsComponent} from './creer-tips/creer-tips.component';
 
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full'},
   { path: 'signin' , component: SigninComponent , pathMatch: 'full'},
+  { path: 'tips' , component: TipsComponent , pathMatch: 'full'},
   { path: 'signup' , component: SignupComponent , pathMatch: 'full'},
-   {path: 'welcome' , component: WelcomeComponent , pathMatch:'full'}
+  { path: 'welcome' , component: WelcomeComponent , pathMatch:'full'},
+  { path: 'newTips' , component: CreerTipsComponent , pathMatch:'full'},
+  { path: 'tips/:lieu' , component: AfficherTipsComponent , pathMatch: 'full'}
 ];
 
 

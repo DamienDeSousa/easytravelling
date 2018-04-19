@@ -1,0 +1,44 @@
+<div class="container">
+  <div [hidden]="submitted">
+      <h1> Proposer un trajet </h1>
+      <hr>
+      <form (ngSubmit)="onSubmit()" #tipsForm="ngForm" class="form-control col-md-12 input-group-lg">
+
+      	<div class="form-group">
+      		<label for="Lieu"> Saisissez le lieu correspondant à votre Tips </label>
+      			<input type="text" class="form-control" name="lieu" id="lieu"
+      			required
+      			[(ngModel)] = "lieuText" name="lieu" #lieu="ngModel">
+      			<div [hidden]="lieu.valid || lieu.pristine" class="alert alert-danger">
+      				Lieu requis
+      			</div>
+      	</div> 
+
+
+      	<div class="form-group">
+      		<label for="Description"> Description </label>
+      			<input type="text" size="100" class="form-control" name="description" id="description"
+      			required
+      			[(ngModel)] = "descriptionText" name="description" #description="ngModel">
+      			<div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+      				Description requise
+      			</div>
+      	</div>
+
+      	<button type="submit" class="btn btn-outline-success" [disabled]="!tipsForm.form.valid"> Valider</button>
+          <button type="button" class="btn btn-outline-secondary" (click)="reset_()"> Reset</button>
+      </form>
+  </div>
+</div>
+
+
+<div [hidden]="!submitted">
+    <h2>Votre tips a bien été ajouté à la liste des trajets</h2>
+
+    <a class="nav-link" (click)="reset_()" routerLink="/trajet">Retour à la page d'accueil</a>
+</div>
+
+
+
+
+        

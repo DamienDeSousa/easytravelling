@@ -13,12 +13,20 @@ import { SignupComponent } from './user/signup/signup.component';
 import { SignupService } from './user/signup.service';
 import { SigninService } from './user/signin.service';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { TipsComponent } from './tips/tips.component';
+import { AfficherTipsComponent } from './afficher-tips/afficher-tips.component';
+import { AfficherTipsService } from './afficher-tips.service';
+import { CreerTipsComponent } from './creer-tips/creer-tips.component';
+import { CreerTipsService } from './creer-tips.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent,  
+    WelcomeComponent,
+    TipsComponent,
+    AfficherTipsComponent,
+    CreerTipsComponent,  
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
   ],
   providers: [
     SignupService,
-    SigninService
+    SigninService,
+    CreerTipsService,
+    AfficherTipsService
   ],
   bootstrap: [AppComponent]
 })
