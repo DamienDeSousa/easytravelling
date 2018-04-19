@@ -22,7 +22,6 @@ export class DashboardComponent implements OnInit {
   logout() {
     this.utilisateur = null;
     sessionStorage.removeItem('utilisateur');
-    //location.reload();
     this.router.navigate(['/welcome']);
   }
 }

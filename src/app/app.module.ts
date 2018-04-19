@@ -15,6 +15,8 @@ import { SigninService } from './user/signin.service';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { RechercheLieuxComponent } from './recherche-lieux/recherche-lieux.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AlertComponent } from './alert/alert.component';
+import { AlertService } from './alert.service';
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppComponent,
     WelcomeComponent,
     RechercheLieuxComponent,
-    DashboardComponent,  
+    DashboardComponent,
+    AlertComponent,  
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   providers: [
     SignupService,
-    SigninService
+    SigninService,
+    AlertService
   ],
   bootstrap: [AppComponent]
 })
