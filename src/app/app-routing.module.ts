@@ -5,6 +5,7 @@ import { SigninComponent} from './user/signin/signin.component';
 import { SignupComponent} from './user/signup/signup.component';
 import { UserModule } from './user/user.module';
 import { WelcomeComponent} from './welcome/welcome.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full'},
   { path: 'signin' , component: SigninComponent , pathMatch: 'full'},
   { path: 'signup' , component: SignupComponent , pathMatch: 'full'},
-   {path: 'welcome' , component: WelcomeComponent , pathMatch:'full'}
+  { path: 'welcome' , component: WelcomeComponent , pathMatch:'full'},
+  { path: 'dashboard', component: DashboardComponent, pathMatch: 'full'}
 ];
 
 

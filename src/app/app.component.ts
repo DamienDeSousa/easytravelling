@@ -9,16 +9,16 @@ import { SigninService } from './user/signin.service';
 })
 export class AppComponent {
   title = 'EasyTravelling';
-  utilisateur = null;
+  //utilisateur = null;
 
   ngOnInit() {
-    this.utilisateur = JSON.parse(sessionStorage.getItem('utilisateur'));
+    //this.utilisateur = JSON.parse(sessionStorage.getItem('utilisateur'));
 
     }
 
-    logout() {
+    /*logout() {
       this.utilisateur = null;
       sessionStorage.removeItem('utilisateur');
       location.reload();
-    };
+    };*/
  }

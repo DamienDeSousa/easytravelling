@@ -1,6 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="jumbotron" *ngIf="utilisateur == null">
     <h1 class="display-3">{{title}}</h1>
+    <h3>{{title}}</h3>
     <hr>
 </div>
 
@@ -13,10 +14,6 @@
             <button type="button" class="btn btn-link btn-lg" routerLink="/signup">Inscription</button>
         </li>
     </ul>
-</div>
-
-<div *ngIf="utilisateur != null">
-    <a class="nav-link" href="#" (click)="logout()">Deconnexion</a>
 </div>
 
 <router-outlet></router-outlet>

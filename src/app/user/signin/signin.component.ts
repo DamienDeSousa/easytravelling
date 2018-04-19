@@ -14,10 +14,10 @@ import { SigninService } from '../signin.service';
 })
 export class SigninComponent implements OnInit {
 
-  utilisateur: User;
+  //utilisateur: User;
 
-  private email: string;
-  private password: string;
+  public email: string;
+  public password: string;
 
   constructor(private route: ActivatedRoute, private location: Location, private SigninService: SigninService, public router: Router) 
   { 
@@ -27,13 +27,13 @@ export class SigninComponent implements OnInit {
   onSubmit() {
     this.route.params.subscribe(params => {
       this.SigninService.Connection(this.email, this.password ).subscribe(res => {
-        this.utilisateur = JSON.parse(sessionStorage.getItem('utilisateur'));
+        //this.utilisateur = JSON.parse(sessionStorage.getItem('utilisateur'));
+        this.router.navigate(['/dashboard']);
       });
     });
   }
 
   ngOnInit() {
-    this.utilisateur = JSON.parse(sessionStorage.getItem('utilisateur'));
+    //this.utilisateur = JSON.parse(sessionStorage.getItem('utilisateur'));
   }
-
 }

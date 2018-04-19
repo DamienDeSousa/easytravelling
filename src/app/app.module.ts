@@ -14,13 +14,15 @@ import { SignupService } from './user/signup.service';
 import { SigninService } from './user/signin.service';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { RechercheLieuxComponent } from './recherche-lieux/recherche-lieux.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    RechercheLieuxComponent,  
+    RechercheLieuxComponent,
+    DashboardComponent,  
   ],
   imports: [
     BrowserModule,
