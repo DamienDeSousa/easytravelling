@@ -13,12 +13,14 @@ import { SignupComponent } from './user/signup/signup.component';
 import { SignupService } from './user/signup.service';
 import { SigninService } from './user/signin.service';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { RechercheLieuxComponent } from './recherche-lieux/recherche-lieux.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent,  
+    WelcomeComponent,
+    RechercheLieuxComponent,  
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AppRoutingModule,
     HttpModule,
     HttpClientModule,                            
-    ReactiveFormsModule 
+    ReactiveFormsModule
   ],
   providers: [
     SignupService,
@@ -35,3 +37,4 @@ import { WelcomeComponent } from './welcome/welcome.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+//https://github.com/sachinchoolur/angular-flash

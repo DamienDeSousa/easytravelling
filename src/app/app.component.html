@@ -1,19 +1,18 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="jumbotron" *ngIf="utilisateur == null">
-  <h1 class="display-3">{{title}}</h1>
-  <h3>{{slogan}}</h3>
-  <hr>
+    <h1 class="display-3">{{title}}</h1>
+    <hr>
 </div>
 
 <div class="container">
-  <ul class="nav">
-      <li class="nav-item">
-          <button type="button" class="btn btn-link btn-lg" routerLink="/signin">Connexion</button>
-      </li>
-      <li class="nav-item">
-          <button type="button" class="btn btn-link btn-lg" routerLink="/signup">Inscription</button>
-      </li>
-  </ul>
+    <ul class="nav">
+        <li class="nav-item">
+            <button type="button" class="btn btn-link btn-lg" routerLink="/signin">Connexion</button>
+        </li>
+        <li class="nav-item">
+            <button type="button" class="btn btn-link btn-lg" routerLink="/signup">Inscription</button>
+        </li>
+    </ul>
 </div>
 
 <div *ngIf="utilisateur != null">
@@ -21,5 +20,3 @@
 </div>
 
 <router-outlet></router-outlet>
-
-
