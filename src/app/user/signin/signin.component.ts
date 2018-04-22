@@ -39,7 +39,7 @@ export class SigninComponent implements OnInit {
         else
         {
           this.alertService.success("Bon retour parmi nous !", "", true);
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/welcome']);
         }
       });
     });
