@@ -17,6 +17,9 @@ import { RechercheLieuxComponent } from './recherche-lieux/recherche-lieux.compo
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AlertComponent } from './alert/alert.component';
 import { AlertService } from './alert.service';
+import { LieuxReglageRayonRechercheComponent } from './lieux-reglage-rayon-recherche/lieux-reglage-rayon-recherche.component';
+import { TrierParCategorieComponent } from './trier-par-categorie/trier-par-categorie.component';
+import { AfficherGoogleMapComponent } from './afficher-google-map/afficher-google-map.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { AlertService } from './alert.service';
     WelcomeComponent,
     RechercheLieuxComponent,
     DashboardComponent,
-    AlertComponent,  
+    AlertComponent,
+    LieuxReglageRayonRechercheComponent,
+    TrierParCategorieComponent,
+    AfficherGoogleMapComponent,  
   ],
   imports: [
     BrowserModule,
