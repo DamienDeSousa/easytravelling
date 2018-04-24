@@ -14,6 +14,13 @@ import { SignupComponent } from './user/signup/signup.component';
 import { SignupService } from './user/signup.service';
 import { SigninService } from './user/signin.service';
 import { WelcomeComponent } from './welcome/welcome.component';
+<<<<<<< HEAD
+import { TipsComponent } from './tips/tips.component';
+import { AfficherTipsComponent } from './afficher-tips/afficher-tips.component';
+import { AfficherTipsService } from './afficher-tips.service';
+import { CreerTipsComponent } from './creer-tips/creer-tips.component';
+import { CreerTipsService } from './creer-tips.service';
+=======
 import { RechercheLieuxComponent } from './recherche-lieux/recherche-lieux.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AlertComponent } from './alert/alert.component';
@@ -22,18 +29,25 @@ import { LieuxReglageRayonRechercheComponent } from './lieux-reglage-rayon-reche
 import { TrierParCategorieComponent } from './trier-par-categorie/trier-par-categorie.component';
 import { AfficherGoogleMapComponent } from './afficher-google-map/afficher-google-map.component';
 import { TrierParCategorieService } from './trier-par-categorie.service';
+>>>>>>> eb6e6b8a7763fc49d7702ced31f9cd5c5dbc6b7f
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
+<<<<<<< HEAD
+    TipsComponent,
+    AfficherTipsComponent,
+    CreerTipsComponent,  
+=======
     RechercheLieuxComponent,
     DashboardComponent,
     AlertComponent,
     LieuxReglageRayonRechercheComponent,
     TrierParCategorieComponent,
     AfficherGoogleMapComponent,  
+>>>>>>> eb6e6b8a7763fc49d7702ced31f9cd5c5dbc6b7f
   ],
   imports: [
     BrowserModule,
@@ -50,8 +64,13 @@ import { TrierParCategorieService } from './trier-par-categorie.service';
   providers: [
     SignupService,
     SigninService,
+<<<<<<< HEAD
+    CreerTipsService,
+    AfficherTipsService
+=======
     AlertService,
     TrierParCategorieService
+>>>>>>> eb6e6b8a7763fc49d7702ced31f9cd5c5dbc6b7f
   ],
   bootstrap: [AppComponent]
 })
