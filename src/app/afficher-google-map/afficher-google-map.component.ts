@@ -43,7 +43,6 @@ export class AfficherGoogleMapComponent implements OnInit {
           center: new google.maps.LatLng(crd.latitude, crd.longitude),
           zoom: 15
         });
-        //var service = new google.maps.places.PlacesService(_this.map);
       }, this.error, this.options);
     }
     else
@@ -60,7 +59,8 @@ export class AfficherGoogleMapComponent implements OnInit {
     console.warn(`ERROR(${err.code}): ${err.message}`);
   }
   
-  ngOnChanges(changes: SimpleChanges) {
+  ngOnChanges(changes: SimpleChanges) 
+  {
     
     for (let property in changes) 
     {

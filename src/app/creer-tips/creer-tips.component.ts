@@ -22,7 +22,7 @@ export class CreerTipsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, 
     private location: Location, 
-   	private CreerTrajetService: CreerTipsService, 
+   	private CreerTipsService: CreerTipsService, 
     public router: Router) { 
 
   	}
