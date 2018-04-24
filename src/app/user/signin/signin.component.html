@@ -1,4 +1,7 @@
-<div *ngIf="utilisateur == null" class="container">
+<div class="container">
+    <button class="btn btn-lg" onClick="window.history.back()">Retour</button>
+</div>
+<div class="container">
     <div class="col-md-4">
         <h1> Connect Yourself !</h1>
         <hr>
@@ -9,7 +12,7 @@
         </div>
 
         <div class="form-group">
-            <input type="password" id="password" class="form-control" placeholder="Mot de passe" requred [(ngModel)]="password" name="password">
+            <input type="password" id="password" class="form-control" placeholder="Mot de passe" required [(ngModel)]="password" name="password">
         </div>
         <button type="submit" class="btn btn-outline-success col align-self-center">Connexion</button>
     </form>
@@ -19,7 +22,4 @@
         </div>
     </div>
 
-</div>
-<div>
-    {{utilisateur | json}}
 </div>

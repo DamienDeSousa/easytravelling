@@ -1,0 +1,6 @@
+<div class="form-group">
+  <label for="exampleInputPassword1">Choisir le type de site à voir:</label>
+  <select class="custom-select" (blur)="onBlur()" [(ngModel)]="categorie">
+    <option *ngFor="let categorie of response" value="{{ categorie.nom_en }}">{{ categorie.nom_fr }}</option>
+  </select>
+</div>

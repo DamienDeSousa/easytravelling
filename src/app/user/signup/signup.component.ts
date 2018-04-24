@@ -7,6 +7,7 @@ import { URLSearchParams } from "@angular/http";
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import {SignupService} from '../signup.service';
+import { AlertService } from '../../alert.service';
 
 @Component({
   selector: 'app-signup',
@@ -15,7 +16,7 @@ import {SignupService} from '../signup.service';
 })
 export class SignupComponent implements OnInit {
 
-  jsonObj = {};
+  jsonObj = null;
 
   user = {lastName: "", firstName: "", email: "", passwd: "", birthday:  null, gender:""};
 
@@ -23,17 +24,29 @@ export class SignupComponent implements OnInit {
 
   genre: string;
 
-  submitted = false;
 
 
-
-  constructor(private route: ActivatedRoute, private location: Location, private SignupService: SignupService, public router: Router) { }
+  constructor(private route: ActivatedRoute, 
+              private location: Location, 
+              private SignupService: SignupService, 
+              public router: Router,
+              private alertService: AlertService) { }
 
   onSubmit() {
     this.route.params.subscribe(params => {
-    this.submitted = true;
     this.SignupService.addUser(this.user.lastName , this.user.firstName , this.user.birthday , this.user.email, this.user.passwd , this.user.gender)
-    .subscribe(res => this.jsonObj = res);
+      .subscribe(res => {
+        this.jsonObj = res;
+        if(this.jsonObj.error == true)
+        {
+          this.alertService.error("Au moins un des champs a été mal saisi.", "Une erreur est survenue...");
+        }
+        else
+        {
+          this.alertService.success("Vous pouvez maintenant vous connecter !", "Inscription réalisée avec succès !", true);
+          this.router.navigate(['/signin']);
+        }
+      });
   });
   }
 

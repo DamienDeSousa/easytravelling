@@ -14,13 +14,5 @@ export class AppComponent {
   utilisateur = null;
 
   ngOnInit() {
-    this.utilisateur = JSON.parse(sessionStorage.getItem('utilisateur'));
-
     }
-
-    logout() {
-      this.utilisateur = null;
-      sessionStorage.removeItem('utilisateur');
-      location.reload();
-    };
  }
