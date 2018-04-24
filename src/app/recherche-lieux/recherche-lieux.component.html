@@ -3,7 +3,8 @@
 <div class="container" style="margin-top: 30px;">
   <form class="col-sm-8" (ngSubmit)="onSubmit()">
     <app-lieux-reglage-rayon-recherche (notify)="getRayon($event)"></app-lieux-reglage-rayon-recherche>
-    <app-trier-par-categorie></app-trier-par-categorie>
+    <app-trier-par-categorie (notify)="getCategorie($event)"></app-trier-par-categorie>
     <button class="btn btn-success" type="submit">Rechercher !</button>
   </form>
 </div>
+<app-afficher-google-map [rayon]=rayon [categorie]=categorie></app-afficher-google-map>

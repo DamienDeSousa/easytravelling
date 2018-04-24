@@ -8,6 +8,7 @@ import { element } from 'protractor';
 })
 export class RechercheLieuxComponent implements OnInit {
   rayon: number;
+  categorie: string;
 
   constructor() { }
 
@@ -18,7 +19,12 @@ export class RechercheLieuxComponent implements OnInit {
     this.rayon = message;
   }
 
+  getCategorie(message: string):void {
+    this.categorie = message;
+  }
+
   onSubmit() {
-    console.log(this.rayon);
+    //console.log(this.rayon);
+    //console.log(this.categorie);
   }
 }

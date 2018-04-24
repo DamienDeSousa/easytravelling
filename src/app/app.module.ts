@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';  
 import { HttpModule } from '@angular/http';
+import { AgmCoreModule } from '@agm/core';
 
 
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { AlertService } from './alert.service';
 import { LieuxReglageRayonRechercheComponent } from './lieux-reglage-rayon-recherche/lieux-reglage-rayon-recherche.component';
 import { TrierParCategorieComponent } from './trier-par-categorie/trier-par-categorie.component';
 import { AfficherGoogleMapComponent } from './afficher-google-map/afficher-google-map.component';
+import { TrierParCategorieService } from './trier-par-categorie.service';
 
 
 @NgModule({
@@ -39,12 +41,17 @@ import { AfficherGoogleMapComponent } from './afficher-google-map/afficher-googl
     AppRoutingModule,
     HttpModule,
     HttpClientModule,                            
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDNwS-CojeS-2pH8c7cOpiuHuoLCGzUjUc',
+      libraries: ['places']
+    })
   ],
   providers: [
     SignupService,
     SigninService,
-    AlertService
+    AlertService,
+    TrierParCategorieService
   ],
   bootstrap: [AppComponent]
 })
