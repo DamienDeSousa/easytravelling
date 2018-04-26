@@ -17,9 +17,14 @@ export class AfficherTipsService {
   getTips(param:string): Observable<any> {
   	let url: string = "http://localhost:8888/tips/"+param;
 
+  //	let datas = {"lieu" : param};
+  //	let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
   	let observable: Observable<any> = this.http.get(url).map((res: Response) => res);
+  //	let observable: Observable<any> = this.http.get("http://bellegarde.damiendesousa.ovh/EasyTravelling/tips/findAll"+param , 
+  //		datas , options).map((res: Response) => res);
 
   	return observable;
   }
 
 }
+

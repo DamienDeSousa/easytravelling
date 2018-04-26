@@ -19,7 +19,7 @@ export class CreerTipsService {
   addTips(lieu:string , description: string): Observable<any> {
   	let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
   	let datas = {"lieu": lieu , "description": description};
-  	let observable: Observable<any> = this.http.post("http://localhost:8888/newTips" , 
+  	let observable: Observable<any> = this.http.post("http://bellegarde.damiendesousa.ovh/EasyTravelling/tips/create" , 
   		datas , options).map((res: Response) => res);
 
   	return observable;
