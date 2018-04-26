@@ -30,9 +30,17 @@ export class AfficherTipsComponent implements OnInit {
 
   	this.route.params.subscribe(params => {
 
-  		this.afficherTipsService.getTips(params.lieu).subscribe(res => this.jsonObj = res);
+  		this.afficherTipsService.getTips(params.lieu+'/date').subscribe(res => this.jsonObj = res);
 
 	});
+ }
+
+
+ sort(sortedBy: string): void {
+   this.route.params.subscribe(params => {
+     let url:string = params.lieu+'sortedBy';
+     this.afficherTipsService.getTips(url).subscribe(res => this.jsonObj = res);
+   });
  }
 
 }
