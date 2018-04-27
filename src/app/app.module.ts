@@ -27,6 +27,10 @@ import { LieuxReglageRayonRechercheComponent } from './lieux-reglage-rayon-reche
 import { TrierParCategorieComponent } from './trier-par-categorie/trier-par-categorie.component';
 import { AfficherGoogleMapComponent } from './afficher-google-map/afficher-google-map.component';
 import { TrierParCategorieService } from './trier-par-categorie.service';
+import { EditerProfilComponent } from './editer-profil/editer-profil.component';
+import { EditerProfilService } from './editer-profil.service';
+import { AjouterPhotosCompteComponent } from './ajouter-photos-compte/ajouter-photos-compte.component';
+import { AjouterPhotosCompteService } from './ajouter-photos-compte.service';
 
 
 @NgModule({
@@ -41,7 +45,9 @@ import { TrierParCategorieService } from './trier-par-categorie.service';
     AlertComponent,
     LieuxReglageRayonRechercheComponent,
     TrierParCategorieComponent,
-    AfficherGoogleMapComponent,  
+    AfficherGoogleMapComponent,
+    EditerProfilComponent,
+    AjouterPhotosCompteComponent,  
   ],
   imports: [
     BrowserModule,
@@ -61,7 +67,9 @@ import { TrierParCategorieService } from './trier-par-categorie.service';
     CreerTipsService,
     AfficherTipsService,
     AlertService,
-    TrierParCategorieService
+    TrierParCategorieService,
+    EditerProfilService,
+    AjouterPhotosCompteService
   ],
   bootstrap: [AppComponent]
 })
