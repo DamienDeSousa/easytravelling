@@ -35,7 +35,29 @@ export class AfficherPhotoComponent implements OnInit {
 
   getPartage(message:any):void {
     this.route.params.subscribe(params => {
-      this.afficherPhotoService.updatePhoto(message.photo.id, message.is_checked).subscribe(res => {
+      this.afficherPhotoService.updatePhotoPartage(message.photo.id, message.is_checked).subscribe(res => {
+        if(res.error)
+        {
+          this.alertService.error(res.message, "Une erreur est survenue...");
+        }
+        else
+        {
+          for(let photo of this.photos)
+          {
+            if(photo.id == res.id)
+            {
+              photo = res;
+            }
+          }
+        }
+      });
+    });
+  }
+
+  getFavoris(message: any)
+  {
+    this.route.params.subscribe(params => {
+      this.afficherPhotoService.updatePhotoFavoris(message.photo.id, message.is_checked).subscribe(res => {
         if(res.error)
         {
           this.alertService.error(res.message, "Une erreur est survenue...");

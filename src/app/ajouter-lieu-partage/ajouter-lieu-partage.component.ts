@@ -17,7 +17,6 @@ export class AjouterLieuPartageComponent implements OnInit {
     {
       this.is_checked = true;
     }
-    console.log(this.photo);
   }
 
   test()

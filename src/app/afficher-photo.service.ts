@@ -17,11 +17,19 @@ export class AfficherPhotoService {
     return observable;
   }
 
-  updatePhoto(idPhoto: number, is_checked: boolean): Observable<any>
+  updatePhotoPartage(idPhoto: number, is_checked: boolean): Observable<any>
   {
     let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
     let datas = {id: idPhoto, partager: is_checked};
     let observable: Observable<any> = this.http.post("http://bellegarde.damiendesousa.ovh/EasyTravelling/user/editPhoto", datas, options).map((res: Response) => res);
+    return observable;
+  }
+
+  updatePhotoFavoris(idPhoto: number, is_checked: boolean): Observable<any>
+  {
+    let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+    let datas = {id: idPhoto, favoris: is_checked};
+    let observable: Observable<any> = this.http.post("http://bellegarde.damiendesousa.ovh/EasyTravelling/user/editPhotoFavoris", datas, options).map((res: Response) => res);
     return observable;
   }
 }
