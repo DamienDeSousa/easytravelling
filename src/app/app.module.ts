@@ -34,6 +34,7 @@ import { AjouterPhotosCompteService } from './ajouter-photos-compte.service';
 import { AfficherPhotoComponent } from './afficher-photo/afficher-photo.component';
 import { AfficherPhotoService } from './afficher-photo.service';
 import { AjouterLieuPartageComponent } from './ajouter-lieu-partage/ajouter-lieu-partage.component';
+import { AjouterLieuFavorisComponent } from './ajouter-lieu-favoris/ajouter-lieu-favoris.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { AjouterLieuPartageComponent } from './ajouter-lieu-partage/ajouter-lieu
     EditerProfilComponent,
     AjouterPhotosCompteComponent,
     AfficherPhotoComponent,
-    AjouterLieuPartageComponent,  
+    AjouterLieuPartageComponent,
+    AjouterLieuFavorisComponent,  
   ],
   imports: [
     BrowserModule,

@@ -72,4 +72,9 @@ export class EditerProfilComponent implements OnInit {
   {
     this.router.navigate(['/profil/photos']);
   }
+
+  redirectAjouterLieuPartage()
+  {
+    this.router.navigate(['/profil/partager-lieux'])
+  }
 }

@@ -12,6 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RechercheLieuxComponent } from './recherche-lieux/recherche-lieux.component';
 import { EditerProfilComponent } from './editer-profil/editer-profil.component';
 import { AjouterPhotosCompteComponent } from './ajouter-photos-compte/ajouter-photos-compte.component';
+import { AjouterLieuPartageComponent } from './ajouter-lieu-partage/ajouter-lieu-partage.component';
 
 
 
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'tips/:lieu' , component: AfficherTipsComponent , pathMatch: 'full'},
   { path: 'recherche-lieux', component: RechercheLieuxComponent, pathMatch: 'full'},
   { path: 'profil', component: EditerProfilComponent, pathMatch: 'full'},
-  { path: 'profil/photos', component: AjouterPhotosCompteComponent, pathMatch: 'full'}
+  { path: 'profil/photos', component: AjouterPhotosCompteComponent, pathMatch: 'full'},
+  { path: 'profil/partager-lieux', component: AjouterLieuPartageComponent, pathMatch: 'full'}
 ];
 
 
