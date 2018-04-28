@@ -31,6 +31,9 @@ import { EditerProfilComponent } from './editer-profil/editer-profil.component';
 import { EditerProfilService } from './editer-profil.service';
 import { AjouterPhotosCompteComponent } from './ajouter-photos-compte/ajouter-photos-compte.component';
 import { AjouterPhotosCompteService } from './ajouter-photos-compte.service';
+import { AfficherPhotoComponent } from './afficher-photo/afficher-photo.component';
+import { AfficherPhotoService } from './afficher-photo.service';
+import { AjouterLieuPartageComponent } from './ajouter-lieu-partage/ajouter-lieu-partage.component';
 
 
 @NgModule({
@@ -47,7 +50,9 @@ import { AjouterPhotosCompteService } from './ajouter-photos-compte.service';
     TrierParCategorieComponent,
     AfficherGoogleMapComponent,
     EditerProfilComponent,
-    AjouterPhotosCompteComponent,  
+    AjouterPhotosCompteComponent,
+    AfficherPhotoComponent,
+    AjouterLieuPartageComponent,  
   ],
   imports: [
     BrowserModule,
@@ -69,7 +74,8 @@ import { AjouterPhotosCompteService } from './ajouter-photos-compte.service';
     AlertService,
     TrierParCategorieService,
     EditerProfilService,
-    AjouterPhotosCompteService
+    AjouterPhotosCompteService,
+    AfficherPhotoService
   ],
   bootstrap: [AppComponent]
 })

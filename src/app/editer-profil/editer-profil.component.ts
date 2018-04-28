@@ -37,7 +37,7 @@ export class EditerProfilComponent implements OnInit {
         {
           this.user = res;
           sessionStorage.setItem('utilisateur', this.user);
-          this.alertService.success("Modification de l'email réussie !", "", true);
+          this.alertService.success("Votre email a bien été mis à jour.", "Modification réussie !");
         }
       });
     });
@@ -57,7 +57,7 @@ export class EditerProfilComponent implements OnInit {
           {
             this.user = res;
             sessionStorage.setItem('utilisateur', this.user);
-            this.alertService.success("Modification de l'email réussie !", "", true);
+            this.alertService.success("Votre mot de passe a bien été mis à jour.", "Modification réussie !");
           }
         });
       });
