@@ -25,4 +25,12 @@ export class EditerProfilService {
       .map((res: Response) => res);
     return observable;
   }
+
+  getAllUsers(id: number): Observable<any>
+  {
+    let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+    let observable: Observable<any> = this.http.get("http://bellegarde.damiendesousa.ovh/EasyTravelling/user/getAllExcept/"+id, options )
+      .map((res: Response) => res);
+    return observable;
+  }
 }

@@ -14,6 +14,7 @@ import { EditerProfilComponent } from './editer-profil/editer-profil.component';
 import { AjouterPhotosCompteComponent } from './ajouter-photos-compte/ajouter-photos-compte.component';
 import { AjouterLieuPartageComponent } from './ajouter-lieu-partage/ajouter-lieu-partage.component';
 import { AVisitePlusTardComponent } from './a-visite-plus-tard/a-visite-plus-tard.component';
+import { VoirAutresProfilsComponent } from './voir-autres-profils/voir-autres-profils.component';
 
 
 
@@ -29,7 +30,8 @@ const routes: Routes = [
   { path: 'profil', component: EditerProfilComponent, pathMatch: 'full'},
   { path: 'profil/photos', component: AjouterPhotosCompteComponent, pathMatch: 'full'},
   { path: 'profil/partager-lieux', component: AjouterLieuPartageComponent, pathMatch: 'full'},
-  { path: 'profil/visiter-plus-tard', component: AVisitePlusTardComponent, pathMatch: 'full'}
+  { path: 'profil/visiter-plus-tard', component: AVisitePlusTardComponent, pathMatch: 'full'},
+  { path: 'profil/profil-membres', component: VoirAutresProfilsComponent, pathMatch: 'full'}
 ];
 
 

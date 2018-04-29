@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-partager-lieux-deja-visite',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./partager-lieux-deja-visite.component.css']
 })
 export class PartagerLieuxDejaVisiteComponent implements OnInit {
+  @Input() photos: any;
 
   constructor() { }
 

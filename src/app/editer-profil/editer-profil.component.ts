@@ -82,4 +82,9 @@ export class EditerProfilComponent implements OnInit {
   {
     this.router.navigate(['/profil/visiter-plus-tard']);
   }
+
+  redirectVoirProfils()
+  {
+    this.router.navigate(['/profil/profil-membres']);
+  }
 }
