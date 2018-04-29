@@ -75,6 +75,11 @@ export class EditerProfilComponent implements OnInit {
 
   redirectAjouterLieuPartage()
   {
-    this.router.navigate(['/profil/partager-lieux'])
+    this.router.navigate(['/profil/partager-lieux']);
+  }
+
+  redirectAVisiterPlusTard()
+  {
+    this.router.navigate(['/profil/visiter-plus-tard']);
   }
 }

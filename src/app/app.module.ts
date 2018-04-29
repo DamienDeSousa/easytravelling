@@ -35,6 +35,9 @@ import { AfficherPhotoComponent } from './afficher-photo/afficher-photo.componen
 import { AfficherPhotoService } from './afficher-photo.service';
 import { AjouterLieuPartageComponent } from './ajouter-lieu-partage/ajouter-lieu-partage.component';
 import { AjouterLieuFavorisComponent } from './ajouter-lieu-favoris/ajouter-lieu-favoris.component';
+import { PartagerLieuxDejaVisiteComponent } from './partager-lieux-deja-visite/partager-lieux-deja-visite.component';
+import { AVisitePlusTardComponent } from './a-visite-plus-tard/a-visite-plus-tard.component';
+import { AVisitePlusTardService } from './a-visite-plus-tard.service';
 
 
 @NgModule({
@@ -54,7 +57,9 @@ import { AjouterLieuFavorisComponent } from './ajouter-lieu-favoris/ajouter-lieu
     AjouterPhotosCompteComponent,
     AfficherPhotoComponent,
     AjouterLieuPartageComponent,
-    AjouterLieuFavorisComponent,  
+    AjouterLieuFavorisComponent,
+    PartagerLieuxDejaVisiteComponent,
+    AVisitePlusTardComponent,  
   ],
   imports: [
     BrowserModule,
@@ -77,7 +82,8 @@ import { AjouterLieuFavorisComponent } from './ajouter-lieu-favoris/ajouter-lieu
     TrierParCategorieService,
     EditerProfilService,
     AjouterPhotosCompteService,
-    AfficherPhotoService
+    AfficherPhotoService,
+    AVisitePlusTardService
   ],
   bootstrap: [AppComponent]
 })
