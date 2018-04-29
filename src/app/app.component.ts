@@ -11,7 +11,8 @@ import { CreerTipsComponent} from './creer-tips/creer-tips.component';
 })
 export class AppComponent {
   title = 'EasyTravelling';
-  utilisateur = null;
+  slogan = 'Pensé et développé pour voyager en toute tranquillité !';
+  utilisateur: any = null;
 
   ngOnInit() {
     }
