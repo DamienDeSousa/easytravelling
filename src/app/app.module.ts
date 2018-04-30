@@ -39,6 +39,7 @@ import { PartagerLieuxDejaVisiteComponent } from './partager-lieux-deja-visite/p
 import { AVisitePlusTardComponent } from './a-visite-plus-tard/a-visite-plus-tard.component';
 import { AVisitePlusTardService } from './a-visite-plus-tard.service';
 import { VoirAutresProfilsComponent } from './voir-autres-profils/voir-autres-profils.component';
+import { AfficherInfosUserComponent } from './afficher-infos-user/afficher-infos-user.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { VoirAutresProfilsComponent } from './voir-autres-profils/voir-autres-pr
     AjouterLieuFavorisComponent,
     PartagerLieuxDejaVisiteComponent,
     AVisitePlusTardComponent,
-    VoirAutresProfilsComponent,  
+    VoirAutresProfilsComponent,
+    AfficherInfosUserComponent,  
   ],
   imports: [
     BrowserModule,
