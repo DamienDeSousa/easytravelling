@@ -16,10 +16,15 @@ export class CreerTipsService {
   constructor(private http: HttpClient) { }
 
 
-  addTips(lieu:string , description: string): Observable<any> {
+  addTips(lieu:string , description: string , idUser:number): Observable<any> {
   	let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
-  	let datas = {"lieu": lieu , "description": description};
-  	let observable: Observable<any> = this.http.post("http://bellegarde.damiendesousa.ovh/EasyTravelling/tips/create" , 
+  //  var date = "2000-01-01";
+    var date = new Date();
+    var note = 0;
+  	let datas = {"lieu": lieu , "description": description , "date":date , "note": note , "idUser":idUser};
+    console.log(datas);
+
+  	let observable: Observable<any> = this.http.post("http://bellegarde.damiendesousa.ovh/EasyTravelling/tips/create" ,
   		datas , options).map((res: Response) => res);
 
   	return observable;
