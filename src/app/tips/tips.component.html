@@ -1,3 +1,4 @@
+<app-dashboard></app-dashboard>
 <div>
 	Vous souhaitez voyager quelque part ? <br/>
 	Recherchez les conseils et astuces proposées par les usagers pour votre Destination !
@@ -5,7 +6,7 @@
 	<div>
 		<input type="text" class="form-control" name="lieu" id="lieu" placeholder="Saisissez votre lieu" [(ngModel)]="lieu"/>
 		<br>
-		<button class="btn btn-outline-success col align-self-center" (click)="show()"> Rechercher </button>
+		<button class="btn btn-outline-success" (click)="show()"> Rechercher </button>
 	</div>
 </div>
 
@@ -16,9 +17,10 @@
 <div>
 	Vous avez voyagé quelque part et vous souhaitez partager quelques informations utiles à propos de cet endroit ? <br/>
 	Ajoutez des tips pour donner des conseils aux autres utilisateurs !
-
-	<div>
-		<button class="btn btn-outline-success col aligne-self-center" routerLink="/newTips"> 
+		<br>
+		<br>
+		<div>
+		<button class="btn btn-outline-success" routerLink="/newTips">
 		Ajouter Tips </button>
 	</div>
 </div>

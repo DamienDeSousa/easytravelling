@@ -1,6 +1,7 @@
+<app-dashboard></app-dashboard>
 <div class="container">
   <div [hidden]="submitted">
-      <h1> Proposer un trajet </h1>
+      <h1> Proposer un tips </h1>
       <hr>
       <form (ngSubmit)="onSubmit()" #tipsForm="ngForm" class="form-control col-md-12 input-group-lg">
 
@@ -12,8 +13,7 @@
       			<div [hidden]="lieu.valid || lieu.pristine" class="alert alert-danger">
       				Lieu requis
       			</div>
-      	</div> 
-
+      	</div>
 
       	<div class="form-group">
       		<label for="Description"> Description </label>
@@ -35,10 +35,5 @@
 <div [hidden]="!submitted">
     <h2>Votre tips a bien été ajouté à la liste des trajets</h2>
 
-    <a class="nav-link" (click)="reset_()" routerLink="/trajet">Retour à la page d'accueil</a>
+    <a class="nav-link" (click)="reset_()" routerLink="/welcome">Retour à la page d'accueil</a>
 </div>
-
-
-
-
-        

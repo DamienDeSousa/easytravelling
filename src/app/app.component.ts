@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { SigninComponent} from './user/signin/signin.component';
-import { SigninService } from './user/signin.service';
+import { SigninComponent} from './signin/signin.component';
+import { SigninService } from './signin.service';
 import { TipsComponent} from './tips/tips.component';
 import { AfficherTipsComponent} from './afficher-tips/afficher-tips.component';
-import { CreerTipsComponent} from './creer-tips/creer-tips.component';
+import { CreerTipsComponent} from './creertips/creertips.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

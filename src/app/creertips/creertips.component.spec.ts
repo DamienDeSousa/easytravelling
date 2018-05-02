@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CreerTipsComponent } from './creer-tips.component';
+import { CreertipsComponent } from './creertips.component';
 
-describe('CreerTipsComponent', () => {
-  let component: CreerTipsComponent;
-  let fixture: ComponentFixture<CreerTipsComponent>;
+describe('CreertipsComponent', () => {
+  let component: CreertipsComponent;
+  let fixture: ComponentFixture<CreertipsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreerTipsComponent ]
+      declarations: [ CreertipsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CreerTipsComponent);
+    fixture = TestBed.createComponent(CreertipsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

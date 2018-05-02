@@ -8,33 +8,33 @@
 
         <div class="form-group">
             <input type="radio" name="genre" id="homme" value="Homme" required [(ngModel)]="user.gender" #genre="ngModel"> Homme
-            
+
             <input type="radio" name="genre" id="femme" value="Femme" required [(ngModel)]="user.gender" #genre="ngModel"> Femme
         </div>
 
-        <div class="row">               
+        <div class="row">
             <div class="col-md form-group">
                 <input type="text" class="form-control" name="firstname" id="firstname" placeholder="FirstName" required [(ngModel)]="user.firstName" name="firstname" #firstname="ngModel">
-                
+
             </div>
-    
+
             <div class="col-md form-group">
                 <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Lastname" required [(ngModel)]="user.lastName" name="lastname" #lastname="ngModel">
-                
+
             </div>
-            
+
             <div class="col-md form-group">
                     <input type="text" class="form-control" name="email" id="email" placeholder="Email" required [(ngModel)]="user.email" name="email" #email="ngModel">
-                
+
             </div>
         </div>
 
-        
+
 
         <div class="row">
             <div class="col-md form-group">
                 <input type="password" class="form-control" name="password" id="password" placeholder="Password" required [(ngModel)]="user.passwd" name="password" #password="ngModel">
-                
+
             </div>
 
             <div class="col-md form-group">
@@ -45,18 +45,10 @@
 
         <div class="form-group">
             <input type="date" class="form-control" name="birthday" id="birthday" [(ngModel)]="user.birthday" />
-            
+
         </div>
 
         <button type="submit" class="btn btn-outline-success" > Valider</button>
         <button type="button" class="btn btn-outline-secondary" (click)="userForm.reset()"> Reset</button>
     </form>
 </div>
-
-<<<<<<< HEAD
-    <p>{{jsonObj.message | json}}</p>
-=======
-<p>{{jsonObj | json}}</p>
->>>>>>> eb6e6b8a7763fc49d7702ced31f9cd5c5dbc6b7f
-
-
