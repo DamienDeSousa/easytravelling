@@ -1,7 +1,11 @@
 <app-dashboard></app-dashboard>
 <div class="container" style="margin-top: 20px;">
   <app-afficher-infos-user [user]=user></app-afficher-infos-user>
+
+  <!-- if editer-profil -->
   <app-editer-profil [user]=user (userChanged)="onUserChange($event)"></app-editer-profil>
+  <!-- endif editer-profil -->
+  
   <!-- if ajouter-photos-compte -->
   <button class="btn btn-primary" (click)="redirectAjouterPhotos()">Ajouter des photos</button>
   <!-- endif ajouter-photos-compte -->
