@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EditerProfilService } from '../editer-profil.service';
 import { AlertService } from '../alert.service';
@@ -14,7 +14,8 @@ export class EditerProfilComponent implements OnInit {
   email: string = "";
   oldPasswd: string = "";
   newPasswd: string = "";
-  user: any;
+  @Input() user: any;
+  @Output() userChanged: EventEmitter<any> = new EventEmitter();
 
   constructor(private route: ActivatedRoute,
               private editerProfilService: EditerProfilService,
@@ -37,6 +38,7 @@ export class EditerProfilComponent implements OnInit {
         {
           this.user = res;
           sessionStorage.setItem('utilisateur', this.user);
+          this.userChanged.emit(this.user);
           this.alertService.success("Votre email a bien été mis à jour.", "Modification réussie !");
         }
       });
@@ -57,6 +59,7 @@ export class EditerProfilComponent implements OnInit {
           {
             this.user = res;
             sessionStorage.setItem('utilisateur', this.user);
+            this.userChanged.emit(this.user);
             this.alertService.success("Votre mot de passe a bien été mis à jour.", "Modification réussie !");
           }
         });
@@ -66,25 +69,5 @@ export class EditerProfilComponent implements OnInit {
     {
       this.alertService.error("L'ancien mot de passe est incorrect.", "Une erreur est survenue...");
     }
-  }
-
-  redirectAjouterPhotos()
-  {
-    this.router.navigate(['/profil/photos']);
-  }
-
-  redirectAjouterLieuPartage()
-  {
-    this.router.navigate(['/profil/partager-lieux']);
-  }
-
-  redirectAVisiterPlusTard()
-  {
-    this.router.navigate(['/profil/visiter-plus-tard']);
-  }
-
-  redirectVoirProfils()
-  {
-    this.router.navigate(['/profil/profil-membres']);
   }
 }

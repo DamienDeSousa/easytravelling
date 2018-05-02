@@ -42,6 +42,7 @@ import { AVisitePlusTardComponent } from './a-visite-plus-tard/a-visite-plus-tar
 import { AVisitePlusTardService } from './a-visite-plus-tard.service';
 import { VoirAutresProfilsComponent } from './voir-autres-profils/voir-autres-profils.component';
 import { AfficherInfosUserComponent } from './afficher-infos-user/afficher-infos-user.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -71,6 +72,7 @@ import { AfficherInfosUserComponent } from './afficher-infos-user/afficher-infos
     AVisitePlusTardComponent,
     VoirAutresProfilsComponent,
     AfficherInfosUserComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 <div class="row justify-content-center">
 
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top: 20px">
+  <div id="carouselExampleIndicators" class="carousel slide bg-dark" data-ride="carousel" style="margin-top: 20px">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" *ngFor="let photo of photos, let i = index" [ngClass]="{'active': i == 0}" [attr.data-slide-to]="i"></li>
     </ol>

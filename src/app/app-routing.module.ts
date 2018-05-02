@@ -17,6 +17,7 @@ import { AjouterPhotosCompteComponent } from './ajouter-photos-compte/ajouter-ph
 import { AjouterLieuPartageComponent } from './ajouter-lieu-partage/ajouter-lieu-partage.component';
 import { AVisitePlusTardComponent } from './a-visite-plus-tard/a-visite-plus-tard.component';
 import { VoirAutresProfilsComponent } from './voir-autres-profils/voir-autres-profils.component';
+import { UserComponent } from './user/user.component';
 
 
 
@@ -30,7 +31,7 @@ const routes: Routes = [
   { path: 'newTips' , component: CreerTipsComponent , pathMatch:'full'},
   { path: 'tips/:lieu' , component: AfficherTipsComponent , pathMatch: 'full'},
   { path: 'recherche-lieux', component: RechercheLieuxComponent, pathMatch: 'full'},
-  { path: 'profil', component: EditerProfilComponent, pathMatch: 'full'},
+  { path: 'profil', component: UserComponent, pathMatch: 'full'},
   { path: 'profil/photos', component: AjouterPhotosCompteComponent, pathMatch: 'full'},
   { path: 'profil/partager-lieux', component: AjouterLieuPartageComponent, pathMatch: 'full'},
   { path: 'profil/visiter-plus-tard', component: AVisitePlusTardComponent, pathMatch: 'full'},
