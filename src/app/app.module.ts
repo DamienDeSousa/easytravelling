@@ -29,6 +29,19 @@ import { LieuxReglageRayonRechercheComponent } from './lieux-reglage-rayon-reche
 import { TrierParCategorieComponent } from './trier-par-categorie/trier-par-categorie.component';
 import { AfficherGoogleMapComponent } from './afficher-google-map/afficher-google-map.component';
 import { TrierParCategorieService } from './trier-par-categorie.service';
+import { EditerProfilComponent } from './editer-profil/editer-profil.component';
+import { EditerProfilService } from './editer-profil.service';
+import { AjouterPhotosCompteComponent } from './ajouter-photos-compte/ajouter-photos-compte.component';
+import { AjouterPhotosCompteService } from './ajouter-photos-compte.service';
+import { AfficherPhotoComponent } from './afficher-photo/afficher-photo.component';
+import { AfficherPhotoService } from './afficher-photo.service';
+import { AjouterLieuPartageComponent } from './ajouter-lieu-partage/ajouter-lieu-partage.component';
+import { AjouterLieuFavorisComponent } from './ajouter-lieu-favoris/ajouter-lieu-favoris.component';
+import { PartagerLieuxDejaVisiteComponent } from './partager-lieux-deja-visite/partager-lieux-deja-visite.component';
+import { AVisitePlusTardComponent } from './a-visite-plus-tard/a-visite-plus-tard.component';
+import { AVisitePlusTardService } from './a-visite-plus-tard.service';
+import { VoirAutresProfilsComponent } from './voir-autres-profils/voir-autres-profils.component';
+import { AfficherInfosUserComponent } from './afficher-infos-user/afficher-infos-user.component';
 
 
 @NgModule({
@@ -49,7 +62,15 @@ import { TrierParCategorieService } from './trier-par-categorie.service';
     TrierParCategorieComponent,
     AfficherGoogleMapComponent,
     CreerTipsComponent,
-
+    EditerProfilComponent,
+    AjouterPhotosCompteComponent,
+    AfficherPhotoComponent,
+    AjouterLieuPartageComponent,
+    AjouterLieuFavorisComponent,
+    PartagerLieuxDejaVisiteComponent,
+    AVisitePlusTardComponent,
+    VoirAutresProfilsComponent,
+    AfficherInfosUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,7 +90,11 @@ import { TrierParCategorieService } from './trier-par-categorie.service';
     CreerTipsService,
     AfficherTipsService,
     AlertService,
-    TrierParCategorieService
+    TrierParCategorieService,
+    EditerProfilService,
+    AjouterPhotosCompteService,
+    AfficherPhotoService,
+    AVisitePlusTardService
   ],
   bootstrap: [AppComponent]
 })

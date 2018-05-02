@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
-
+  user: any;
   constructor() { }
 
   ngOnInit() {
+    this.user = JSON.parse(sessionStorage.getItem('utilisateur'));
   }
 
 }

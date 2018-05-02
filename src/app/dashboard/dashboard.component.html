@@ -1,10 +1,13 @@
 <div class="container">
     <nav class="nav" *ngIf="utilisateur != null">
-        <button class="btn btn-link" routerLink="/recherche-lieux">Rechercher un lieu</button>
-        <button class="btn btn-link" routerLink="/recherche-lieux">Profil</button>
-        <button class="btn btn-link" routerLink="/tips">Tips</button>
-        <button class="btn btn-link" routerLink="/recherche-lieux">Lieux</button>
-        <button class="btn btn-link" (click)="logout()">Déconnexion</button>
+        <button class="btn btn-link btn-lg" routerLink="/recherche-lieux">Rechercher un lieu</button>
+        <!-- if edit-profil -->
+        <button class="btn btn-link btn-lg" routerLink="/profil">Profil</button>
+        <!-- endif edit-profil -->
+
+        <button class="btn btn-link btn-lg" routerLink="/tips">Tips</button>
+        
+        <button class="btn btn-link btn-lg" (click)="logout()">Déconnexion</button>
     </nav>
 
     <div class="container" *ngIf="utilisateur == null">
