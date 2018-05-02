@@ -8,11 +8,11 @@ import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { UserModule } from './user/user.module';
-import { SigninComponent } from './user/signin/signin.component';
-import { SignupComponent } from './user/signup/signup.component';
-import { SignupService } from './user/signup.service';
-import { SigninService } from './user/signin.service';
+//import { UserModule } from './user/user.module';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
+import { SignupService } from './signup.service';
+import { SigninService } from './signin.service';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 import { TipsComponent } from './tips/tips.component';
@@ -34,7 +34,9 @@ import { TrierParCategorieService } from './trier-par-categorie.service';
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent,
+    WelcomeComponent
+    SigninComponent,
+    SignupComponent,
 
     TipsComponent,
     AfficherTipsComponent,

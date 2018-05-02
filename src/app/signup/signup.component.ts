@@ -7,7 +7,7 @@ import { URLSearchParams } from "@angular/http";
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import {SignupService} from '../signup.service';
-import { AlertService } from '../../alert.service';
+import { AlertService } from '../alert.service';
 
 @Component({
   selector: 'app-signup',
@@ -26,9 +26,9 @@ export class SignupComponent implements OnInit {
 
 
 
-  constructor(private route: ActivatedRoute, 
-              private location: Location, 
-              private SignupService: SignupService, 
+  constructor(private route: ActivatedRoute,
+              private location: Location,
+              private SignupService: SignupService,
               public router: Router,
               private alertService: AlertService) { }
 

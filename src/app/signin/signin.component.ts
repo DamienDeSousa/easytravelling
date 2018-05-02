@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';
 import { URLSearchParams } from "@angular/http";
 import { SigninService } from '../signin.service';
-import { AlertService } from '../../alert.service';
+import { AlertService } from '../alert.service';
 
 @Component({
   selector: 'app-signin',
@@ -19,12 +19,12 @@ export class SigninComponent implements OnInit {
   public password: string;
   public response = null;
 
-  constructor(private route: ActivatedRoute, 
-              private location: Location, 
-              private SigninService: SigninService, 
+  constructor(private route: ActivatedRoute,
+              private location: Location,
+              private SigninService: SigninService,
               public router: Router,
-              private alertService: AlertService) 
-  { 
+              private alertService: AlertService)
+  {
 
   }
 
@@ -46,6 +46,6 @@ export class SigninComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+
   }
 }
