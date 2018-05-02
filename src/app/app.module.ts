@@ -34,7 +34,7 @@ import { TrierParCategorieService } from './trier-par-categorie.service';
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
     SigninComponent,
     SignupComponent,
 
