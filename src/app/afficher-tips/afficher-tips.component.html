@@ -9,9 +9,11 @@
                 <thead class="thead-dark">
                     <tr>
                       <th scope="">
+                        <!-- if ajouter-tips-favoris -->
                         Mes favoris
                         <button class="btn btn-sm btn-dark" (click)="LikedTips(utilisateur.id)">
                         </button>
+                        <!-- endif ajouter-tips-favoris -->
                       </th>
                       <th scope="">
                           Note
@@ -37,7 +39,7 @@
                         <td> {{tips.note}} </td>
                         <td> {{tips.date}} </td>
 
-
+                        <!-- if ajouter-tips-favoris -->
                         <td *ngIf="utilisateur != null && listeLikedTipsUtilisateur.includes(tips.id) ">
                            <button type="button" class="btn btn-fail" (click)="Dislike(tips.id , utilisateur.id , tips.note)" data-toggle="tooltip" data-placement="top" title="Dislike">
                                 Je n'aime plus
@@ -51,12 +53,15 @@
                                 J'aime
                                </button>
                         </td>
+                        <!-- endif ajouter-tips-favoris -->
 
+                        <!-- if supprimer-tips -->
                         <td *ngIf="utilisateur != null && tips.idUser == utilisateur.id">
                             <button type="button" class="btn btn-danger" (click)="Delete(tips.id)" data-toggle="tooltip" data-placement="top" title="Delete">
                                  Supprimer
                                 </button>
                          </td>
+                         <!-- endif supprimer-tips -->
 
                     </tr>
                 </tbody>
