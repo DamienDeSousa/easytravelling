@@ -16,10 +16,18 @@ import { SigninService } from './signin.service';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 import { TipsComponent } from './tips/tips.component';
+
 import { AfficherTipsComponent } from './afficher-tips/afficher-tips.component';
 import { AfficherTipsService } from './afficher-tips.service';
+
 import { CreerTipsComponent } from './creertips/creertips.component';
 import { CreerTipsService } from './creer-tips.service';
+
+import { AfficherTipsFavorisComponent } from './afficher-tips-favoris/afficher-tips-favoris.component';
+import { AfficherTipsFavorisService} from './afficher-tips-favoris.service';
+
+import { LikeTipsService } from './like-tips.service';
+import { LikeTipsComponent } from './like-tips/like-tips.component';
 
 import { RechercheLieuxComponent } from './recherche-lieux/recherche-lieux.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -43,6 +51,9 @@ import { AVisitePlusTardService } from './a-visite-plus-tard.service';
 import { VoirAutresProfilsComponent } from './voir-autres-profils/voir-autres-profils.component';
 import { AfficherInfosUserComponent } from './afficher-infos-user/afficher-infos-user.component';
 import { UserComponent } from './user/user.component';
+import { LikeComponent } from './like/like.component';
+import { SupprimerTipsComponent } from './supprimer-tips/supprimer-tips.component';
+import { SupprimerTipsService } from './supprimer-tips.service';
 
 
 @NgModule({
@@ -51,11 +62,9 @@ import { UserComponent } from './user/user.component';
     WelcomeComponent,
     SigninComponent,
     SignupComponent,
-
     TipsComponent,
     AfficherTipsComponent,
     CreerTipsComponent,
-
     RechercheLieuxComponent,
     DashboardComponent,
     AlertComponent,
@@ -73,6 +82,10 @@ import { UserComponent } from './user/user.component';
     VoirAutresProfilsComponent,
     AfficherInfosUserComponent,
     UserComponent,
+    LikeComponent,
+    LikeTipsComponent,
+    SupprimerTipsComponent,
+    AfficherTipsFavorisComponent,
   ],
   imports: [
     BrowserModule,
@@ -91,12 +104,15 @@ import { UserComponent } from './user/user.component';
     SigninService,
     CreerTipsService,
     AfficherTipsService,
+    LikeTipsService,
+    SupprimerTipsService,
     AlertService,
     TrierParCategorieService,
     EditerProfilService,
     AjouterPhotosCompteService,
     AfficherPhotoService,
-    AVisitePlusTardService
+    AVisitePlusTardService,
+    AfficherTipsFavorisService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,12 @@
+
+<td *ngIf="user.id != null && listeLikedTipsUtilisateur.includes(tipsid.id) ">
+   <button type="button" class="btn btn-fail" (click)="Dislike(tipsid.id , user.id , tipsid.note)" data-toggle="tooltip" data-placement="top" title="Dislike">
+        Je n'aime plus
+       </button>
+</td>
+
+<td *ngIf="user.id != null && listeLikedTipsUtilisateur.includes(tipsid.id) == false">
+   <button type="button" class="btn btn-success" (click)="Like(tipsid.id , user.id , tipsid.note)" data-toggle="tooltip" data-placement="top" title="Like">
+        J'aime
+  </button>
+</td>

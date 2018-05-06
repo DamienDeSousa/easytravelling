@@ -9,9 +9,7 @@
                 <thead class="thead-dark">
                     <tr>
                       <th scope="">
-                        <!-- if like-tips -->
-                           <button class="btn btn-link btn-lg" routerLink="/favoris">Mes favoris</button>
-                        <!-- endif like-tips -->
+
                       </th>
                       <th scope="">
                           Note
@@ -32,7 +30,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let tips of jsonObj.tab">
+                    <tr *ngFor="let tips of jsonObjt.tab">
                         <th scope="row"> {{tips.description}} </th>
                         <td> {{tips.note}} </td>
                         <td> {{tips.date}} </td>

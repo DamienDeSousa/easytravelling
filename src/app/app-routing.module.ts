@@ -18,6 +18,7 @@ import { AjouterLieuPartageComponent } from './ajouter-lieu-partage/ajouter-lieu
 import { AVisitePlusTardComponent } from './a-visite-plus-tard/a-visite-plus-tard.component';
 import { VoirAutresProfilsComponent } from './voir-autres-profils/voir-autres-profils.component';
 import { UserComponent } from './user/user.component';
+import { AfficherTipsFavorisComponent } from './afficher-tips-favoris/afficher-tips-favoris.component';
 
 
 
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'signup' , component: SignupComponent , pathMatch: 'full'},
   { path: 'welcome' , component: WelcomeComponent , pathMatch:'full'},
   { path: 'newTips' , component: CreerTipsComponent , pathMatch:'full'},
+  { path:  'favoris' , component: AfficherTipsFavorisComponent , pathMatch:'full'},
   { path: 'tips/:lieu' , component: AfficherTipsComponent , pathMatch: 'full'},
   { path: 'recherche-lieux', component: RechercheLieuxComponent, pathMatch: 'full'},
   { path: 'profil', component: UserComponent, pathMatch: 'full'},

@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { URLSearchParams} from "@angular/http";
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { AfficherTipsService } from '../afficher-tips.service';
+//import { AfficherTipsFavorisComponent } from '../afficher-tips-favoris/afficher-tips-favoris.component';
+//import { LikeTipsComponent } from '../like-tips/like-tips.component';
 
 
 @Component({
@@ -45,6 +47,7 @@ export class AfficherTipsComponent implements OnInit {
             this.listeLikedTipsUtilisateur.push(this.idTips);
           }
           console.log(this.listeLikedTipsUtilisateur);
+          console.log(this.utilisateur.id);
         });
       }
 	});
@@ -79,7 +82,7 @@ export class AfficherTipsComponent implements OnInit {
      this.afficherTipsService.Dislike(id_tips , id_utilisateur , note_tips).subscribe(res => this.ngOnInit());
    });
 //   location.reload();
- }
+}
 
  Delete (id_tips:number) {
     this.route.params.subscribe(params => {
