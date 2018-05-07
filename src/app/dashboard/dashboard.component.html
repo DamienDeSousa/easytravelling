@@ -1,14 +1,12 @@
 <div class="container">
     <nav class="nav" *ngIf="utilisateur != null">
         <button class="btn btn-link btn-lg" routerLink="/recherche-lieux">Rechercher un lieu</button>
-        <!-- if edit-profil -->
+        <!-- if afficher-infos-user -->
         <button class="btn btn-link btn-lg" routerLink="/profil">Profil</button>
-        <!-- endif edit-profil -->
-
+        <!-- endif afficher-infos-user -->
         <!-- if tips -->
         <button class="btn btn-link btn-lg" routerLink="/tips">Tips</button>
         <!-- endif tips -->
-
         <button class="btn btn-link btn-lg" (click)="logout()">Déconnexion</button>
     </nav>
 

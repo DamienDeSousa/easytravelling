@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Content } from './classes/content';
+import { Content } from './classes/Content';
 import { Subject } from 'rxjs/Subject';
 import { IfObservable } from 'rxjs/observable/IfObservable';
 import { Observable } from 'rxjs/Observable';
