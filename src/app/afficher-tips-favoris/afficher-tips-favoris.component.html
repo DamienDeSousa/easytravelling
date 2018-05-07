@@ -12,18 +12,22 @@
 
                       </th>
                       <th scope="">
+                        <!-- if like-tips -->
                           Note
                           <button class="btn btn-sm btn-dark" (click)="sort('note')">
                             <i class="fa fa-sort" aria-hidden="true"></i>
                           </button>
+                          <!-- endif like-tips -->
 
                       </th>
 
                         <th scope="" >
+                          <!-- if like-tips -->
                           Date
                           <button class="btn btn-sm btn-dark" (click)="sort('date')">
                             <i class="fa fa-sort" aria-hidden="true"></i>
                           </button>
+                          <!-- endif like-tips -->
                         </th>
                         <th scope=""></th>
                         <th scope=""></th>
@@ -32,7 +36,9 @@
                 <tbody>
                     <tr *ngFor="let tips of jsonObjt.tab">
                         <th scope="row"> {{tips.description}} </th>
+                        <!-- if like-tips -->
                         <td> {{tips.note}} </td>
+                        <!-- endif like-tips -->
                         <td> {{tips.date}} </td>
 
                         <!-- if like-tips -->

@@ -51,7 +51,6 @@ import { AVisitePlusTardService } from './a-visite-plus-tard.service';
 import { VoirAutresProfilsComponent } from './voir-autres-profils/voir-autres-profils.component';
 import { AfficherInfosUserComponent } from './afficher-infos-user/afficher-infos-user.component';
 import { UserComponent } from './user/user.component';
-import { LikeComponent } from './like/like.component';
 import { SupprimerTipsComponent } from './supprimer-tips/supprimer-tips.component';
 import { SupprimerTipsService } from './supprimer-tips.service';
 
@@ -82,7 +81,6 @@ import { SupprimerTipsService } from './supprimer-tips.service';
     VoirAutresProfilsComponent,
     AfficherInfosUserComponent,
     UserComponent,
-    LikeComponent,
     LikeTipsComponent,
     SupprimerTipsComponent,
     AfficherTipsFavorisComponent,
